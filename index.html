@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hacker Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <h2>Portfolio</h2>
+    <ul>
+      <li><a href="#" data-section="home">Home</a></li>
+      <li><a href="#" data-section="about">About</a></li>
+      <li><a href="#" data-section="projects">Projects</a></li>
+      <li><a href="#" data-section="certifications">Certifications</a></li>
+      <li><a href="#" data-section="resume">Resume</a></li>
+    </ul>
+  </aside>
+
+  <!-- Content Area -->
+  <main>
+    <!-- Home -->
+    <section id="home" class="content-section active">
+      <img src="images.jpeg" alt="My Logo" class="logo">
+      
+      <h1 class="slide-text">Hi I'M Arshdeep kaur</h1>
+
+      <h1 class="slide-text">Cyber Security Enthusiast | Ethical Hacker | Defender of the Digital Realm</h1>
+     <!-- <p>Cyber Security Enthusiast | Ethical Hacker | Defender of the Digital Realm</p>-->
+    </section>
+
+    <!-- About -->
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="Snapchat-759608565.jpg" alt="Your Photo">
+        <p class="slide-text">
+          Hi, I'm Arshdeep Kaur. A cybersecurity enthusiast and web developer passionate 
+          about hacking, ethical security, and building innovative projects. 
+          Welcome to my hacker-themed portfolio.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="content-section">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Password Strength Checker</h3>
+        <p>A tool to test password strength with entropy & HaveIBeenPwned API integration.</p>
+      </div>
+      <div class="project-card">
+        <h3>Keylogger (Educational)</h3>
+        <p>Created a Python keylogger for awareness and defense mechanisms.</p>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>This hacker-style portfolio built with HTML, CSS, and JS.</p>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+     <section id="certifications" class="content-section">
+  <h2>My Certifications</h2>
+  <img src="WhatsApp Image 2025-08-19 at 19.26.06_447fd9b1.jpg" alt="Certificate 1" class="certificate">
+  <img src="WhatsApp Image 2025-08-19 at 19.26.06_e8c9287e.jpg" alt="Certificate 2" class="certificate">
+  <img src="WhatsApp Image 2025-08-19 at 19.23.27_e78d2b9b.jpg" alt="Certificate 3" class="certificate">
+</section>
+
+
+<!-- Resume -->
+<section id="resume" class="content-section p-8 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">Resume</h2>
+  
+  <!-- Embedded Resume Preview -->
+  <div class="flex justify-center mb-6">
+    <iframe src="ARSH%20Resume.pdf" 
+            class="w-full md:w-3/4 h-[600px] border-0 rounded-lg shadow-lg">
+    </iframe>
+  </div>
+
+  <!-- Download Button -->
+  <div class="resume">
+    <p class="mb-4">Download my resume below:</p>
+    <a href="ARSH%20Resume.pdf" target="_blank" 
+       class="bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition">
+       📄 Download Resume
+    </a>
+  </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer id="socials" 
+        class="fixed top-1/2 right-8 transform -translate-y-1/2 flex flex-col items-center space-y-6 z-50">
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/cyber_nova_arsh05?utm_source=qr&igsh=MTVmaHFsMTY1djlyaQ==" target="_blank"
+    class="flex flex-col items-center space-y-2 hover:opacity-80 text-[#00f7ff] font-semibold">
+    <img src="https://img.icons8.com/ios-filled/50/00f7ff/instagram-new.png" alt="Instagram" class="w-8 h-8">
+    <span class="hidden md:inline text-sm">Instagram</span>
+  </a>
+
+
+  <!-- LinkedIn -->
+  <a href="http://Www.linkedin.com/in/arshdeep-kaur-5ab236289" target="_blank"
+    class="flex flex-col items-center space-y-2 hover:opacity-80 text-[#00f7ff] font-semibold">
+    <img src="https://img.icons8.com/ios-filled/50/00f7ff/linkedin.png" alt="LinkedIn" class="w-8 h-8">
+    <span class="hidden md:inline text-sm">LinkedIn</span>
+  </a>
+
+  <!-- GitHub -->
+  <a href="https://github.com/Whitedevil0237" target="_blank"
+    class="flex flex-col items-center space-y-2 hover:opacity-80 text-[#00f7ff] font-semibold">
+    <img src="https://img.icons8.com/ios-filled/50/00f7ff/github.png" alt="GitHub" class="w-8 h-8">
+    <span class="hidden md:inline text-sm">GitHub</span>
+  </a>
+</footer>
+
+  </main>
+
+
+  
+
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <script>
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const sectionId = this.getAttribute('data-section');
+      document.querySelectorAll('.content-section').forEach(sec => {
+        sec.classList.remove('active');
+        sec.style.display = 'none';
+      });
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+        activeSection.classList.add('active');
+        activeSection.style.display = 'block';
+      }
+    });
+  });
+
+  // Initially hide all except active
+  document.querySelectorAll('.content-section').forEach(sec => {
+    if (!sec.classList.contains('active')) {
+      sec.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
