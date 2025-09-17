@@ -99,24 +99,17 @@ h1, h2 {
 
 .about-container {
   display: flex;
-  flex-direction: column;  /* stack text first, then image */
-  align-items: center;     /* center everything */
-  text-align: center;      /* center text */
-  margin-top: 20px;
-}
-
-.about-container p {
-  font-size: 1.3rem;   /* increase text size */
-  margin-bottom: 20px;
-  max-width: 700px;    /* keep it neat */
-  line-height: 1.6;
+  flex-direction: column; /* stack image above text */
+  align-items: center;    /* center image and text horizontally */
+  text-align: center;     /* center text */
 }
 
 .about-container img {
-  max-width: 300px;   /* bigger image */
-  border-radius: 20px; /* rounded corners, keep square look */
-  margin-top: 10px;
+  max-width: 200px;  /* adjust size */
+  border-radius: 50%; /* optional: make it circular */
+  margin-bottom: 20px;
 }
+
 
 
 
