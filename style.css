@@ -97,18 +97,19 @@ h1, h2 {
   text-shadow: 0 0 10px #00f7ff;
 }
 
-/* About Section */
 .about-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* stack image above text */
+  align-items: center;    /* center image and text horizontally */
+  text-align: center;     /* center text */
 }
 
 .about-container img {
-  width: 180px;
-  border-radius: 50%;
-  border: 2px solid #00f7ff;
-  box-shadow: 0 0 15px #00f7ff;
+  max-width: 200px;  /* adjust size */
+  border-radius: 50%; /* optional: make it circular */
   margin-bottom: 20px;
 }
+
 
 /* Projects Section */
 .project-card {
@@ -201,3 +202,4 @@ canvas#matrix {
 .certificate:hover {
   transform: scale(1.05);
 }
+
